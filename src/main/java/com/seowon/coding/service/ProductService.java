@@ -53,7 +53,7 @@ public class ProductService {
         // Repository를 사용하여 category 로 찾을 제품목록 제공
 
         productRepository.findByCategory(category);
-        return List.of();
+        return List.of(); //
     }
 
     /*** TODO #6 (리펙토링): 대량 가격 변경 로직을 도메인 객체 안으로 리팩토링하세요.
