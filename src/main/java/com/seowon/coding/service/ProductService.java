@@ -51,13 +51,15 @@ public class ProductService {
     public List<Product> findProductsByCategory(String category) {
         // TODO #1: 구현 항목
         // Repository를 사용하여 category 로 찾을 제품목록 제공
+
+        productRepository.findByCategory(category);
         return List.of();
     }
 
-    /**
-     * TODO #6 (리펙토링): 대량 가격 변경 로직을 도메인 객체 안으로 리팩토링하세요.
+    /*** TODO #6 (리펙토링): 대량 가격 변경 로직을 도메인 객체 안으로 리팩토링하세요.
      */
-    public void applyBulkPriceChange(List<Long> productIds, double percentage, boolean includeTax) {
+    public void ap
+     plyBulkPriceChange(List<Long> productIds, double percentage, boolean includeTax) {
         if (productIds == null || productIds.isEmpty()) {
             throw new IllegalArgumentException("empty productIds");
         }
